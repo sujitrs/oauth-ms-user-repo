@@ -1,0 +1,25 @@
+#spring:
+  #cloud:
+#     config:
+        #discovery:
+         #  enabled: true
+          # serviceId: ms-config-server
+        #uri: http://ms-config-server/
+  #application:
+     #name: ms-user-repo
+#eureka:
+  #instance:
+    #preferIpAddress: true
+
+     
+#-Dserver.port=8180 -Deureka.client.serviceUrl.defaultZone=http://localhost:8761/eureka/
+#spring.main.allow-bean-definition-overriding=true
+spring:
+  cloud:
+     config:
+        uri: http://localhost:9998/
+        enabled: false        
+  application:
+     name: ms-user-repo 
+  main:
+     allow-bean-definition-overriding: true
